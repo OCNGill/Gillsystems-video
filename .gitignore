@@ -1,0 +1,231 @@
+# =============================================================================
+# Gillsystems-video .gitignore
+# =============================================================================
+# This repo stores scripts, configs, and documentation only.
+# ALL media assets are gitignored — they live on ZFS storage (50GB limit).
+# See README.md for the YouTube-delete policy and storage rules.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# VIDEO — all common production, intermediate, and delivery formats
+# ---------------------------------------------------------------------------
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+*.wmv
+*.flv
+*.mts
+*.m2ts
+*.ts
+*.vob
+*.ogv
+*.3gp
+*.mxf
+*.prores
+*.dnxhd
+*.dnxhr
+
+# ---------------------------------------------------------------------------
+# AUDIO — recordings, stems, mixes, and samples
+# ---------------------------------------------------------------------------
+*.wav
+*.mp3
+*.flac
+*.aac
+*.ogg
+*.wma
+*.m4a
+*.aiff
+*.aif
+*.alac
+*.opus
+*.ac3
+*.dts
+*.amr
+*.caf
+
+# ---------------------------------------------------------------------------
+# IMAGE — raster, raw, and layered source files
+# ---------------------------------------------------------------------------
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.psd
+*.psb
+*.heic
+*.heif
+*.raw
+*.cr2
+*.nef
+*.arw
+*.dng
+*.exr
+*.hdr
+*.svg~           # SVG backups (keep committed SVGs)
+
+# ---------------------------------------------------------------------------
+# 3D / VFX — Blender, FBX, glTF, and GPU cache files
+# ---------------------------------------------------------------------------
+*.blend
+*.blend1
+*.blend2
+*.fbx
+*.glb
+*.gltf
+*.obj
+*.mtl
+*.abc              # Alembic
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.vdb              # OpenVDB
+*.ass              # Arnold
+*.hip              # Houdini
+*.hipnc
+*.nk               # Nuke
+*.comp             # Fusion
+*.drp              # DaVinci Resolve project (keep committed — not a media asset)
+
+# ---------------------------------------------------------------------------
+# RENDER / EXPORT / CACHE DIRECTORIES — entire output trees
+# ---------------------------------------------------------------------------
+renders/
+exports/
+raw_footage/
+cache/
+.cache/
+tmp/
+temp/
+.thumbnails/
+previews/
+proxies/
+
+# ---------------------------------------------------------------------------
+# AUDIO DIRECTORY — block everything except the scripts/ subfolder
+# ---------------------------------------------------------------------------
+audio/*
+!audio/scripts/
+audio/scripts/*
+!audio/scripts/*.md
+!audio/scripts/*.py
+!audio/scripts/*.json
+!audio/scripts/*.yaml
+!audio/scripts/*.yml
+!audio/scripts/*.txt
+!audio/scripts/*.bat
+!audio/scripts/*.sh
+
+# ---------------------------------------------------------------------------
+# OS / EDITOR / SYSTEM JUNK
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+.directory
+$RECYCLE.BIN/
+
+# Editor / IDE
+.idea/
+.vscode/
+*.sublime-*
+*.code-workspace
+
+# DaVinci Resolve
+*.gallery/
+*.drp.autosave
+Resolve Disk Database/
+Resolve Project Backups/
+CacheClip/
+.gallery/
+.editindex/
+.Trash-*/
+
+# Blender
+*.blend.crash.txt
+__pycache__/
+*.pyc
+*.pyo
+
+# Adobe
+*.prproj
+*.aep
+*.aet
+*.xmlx            # Premiere XML exports
+Adobe Premiere Pro Auto-Save/
+Adobe After Effects Auto-Save/
+AMEEncodingLog.txt
+
+# Unreal Engine
+DerivedDataCache/
+Intermediate/
+Saved/
+*.uasset           # Unreal assets (binary blobs)
+
+# Unity
+Library/
+Temp/
+Obj/
+*.asset.meta       # skip generated meta files
+
+# ---------------------------------------------------------------------------
+# CAPTURE / SCREEN RECORDING
+# ---------------------------------------------------------------------------
+*.obs
+*.mkv.old
+*.flv.old
+
+# ---------------------------------------------------------------------------
+# ARCHIVES / PACKAGES (large binary bundles)
+# ---------------------------------------------------------------------------
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.lz4
+*.zst
+
+# ---------------------------------------------------------------------------
+# ALLOWED — these are always tracked regardless of location
+# ---------------------------------------------------------------------------
+!*.md
+!*.py
+!*.json
+!*.yaml
+!*.yml
+!*.drp
+!*.txt
+!*.bat
+!*.sh
+!*.toml
+!*.cfg
+!*.ini
+!*.env.example
+!*.env.sample
+!.gitignore
+!README.md
+!LICENSE
+
+# Whitelist critical directories
+!comfyui_workflows/
+!scripts/
+!conductor/
+!docs/
+!config/

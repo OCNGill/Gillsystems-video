@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-07-11T00:00:00Z",
+    "description": "Current state of all Gillsystems-video assets and infrastructure. This is the machine-readable source of truth for pipeline automation."
+  },
+  "infrastructure": {
+    "zfs": {
+      "pool": "tank",
+      "dataset": "tank/gillsystems-video",
+      "quota_gb": 50,
+      "compression": "lz4",
+      "mountpoint": "/tank/gillsystems-video",
+      "current_usage_gb": 0,
+      "last_checked": null
+    },
+    "tools": {
+      "davinci_resolve": {
+        "installed": false,
+        "version": null,
+        "project_db_path": null
+      },
+      "comfyui": {
+        "installed": false,
+        "version": null,
+        "host": "localhost",
+        "port": 8188,
+        "api_enabled": false
+      },
+      "python": {
+        "version": null,
+        "venv_path": null
+      }
+    },
+    "youtube": {
+      "channel_id": null,
+      "channel_name": "Gillsystems",
+      "authenticated": false,
+      "upload_method": "manual"
+    }
+  },
+  "assets": {
+    "shared": {
+      "path": "/tank/gillsystems-video/shared",
+      "description": "Reusable assets that persist across projects (logos, intros, templates, brand assets)",
+      "items": {}
+    },
+    "projects": {}
+  },
+  "pipeline": {
+    "active_slots_max": 2,
+    "active_projects": [],
+    "published_projects": [],
+    "cleanup_queue": [],
+    "automation": {
+      "comfyui_to_resolve": false,
+      "auto_render": false,
+      "auto_upload": false,
+      "cleanup_reminder": true
+    }
+  },
+  "scripts": {
+    "available": [],
+    "scheduled": {}
+  },
+  "notes": ""
+}
