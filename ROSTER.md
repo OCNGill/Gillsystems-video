@@ -19,8 +19,8 @@
 
 | Component | Location | Specs |
 |-----------|----------|-------|
-| ComfyUI (Primary) | Main (10.0.0.164) | Radeon RX 7900 XTX 24GB, ComfyUI portable |
-| ZFS Video Assets | HTPC (10.0.0.42) | gillsystems_zfs_pool/video_assets (50GB quota) |
+| ComfyUI (Primary) | Main ([NODE-LOCAL]) | Radeon RX 7900 XTX 24GB, ComfyUI portable |
+| ZFS Video Assets | HTPC ([NODE-LOCAL]) | gillsystems_zfs_pool/video_assets (50GB quota) |
 | Seedance 2.5 | OpenRouter (cloud) | bytedance/seedance — requires Commander auth |
 | MiniMax H3 | Main (local) | ComfyUI custom nodes |
 
